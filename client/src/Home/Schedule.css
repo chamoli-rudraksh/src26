@@ -17,7 +17,7 @@
 .magazine-spread {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #FAF8F2; 
+  background-color: var(--surface-bg);
   border-top: 2px solid var(--text-primary);
   border-bottom: 2px solid var(--text-primary);
   position: relative;
@@ -65,7 +65,7 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #FF6B00; 
+  color: var(--primary);
   margin-top: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -90,7 +90,7 @@
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.95rem;
   font-weight: 700;
-  color: #FF6B00; 
+  color: var(--primary);
 }
 
 .schedule-event {

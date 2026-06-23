@@ -3,22 +3,25 @@
 
 :root {
 
-  --primary: #C55A11;
-  --primary-dark: #96420A;
-  --primary-light: #DF762F;
-  --primary-glow: rgba(197, 90, 17, 0.18);
-  --primary-glow-strong: rgba(197, 90, 17, 0.32);
+  --primary: #2F6B47;
+  --primary-dark: #1E4A30;
+  --primary-light: #448C61;
+  --primary-glow: rgba(47, 107, 71, 0.18);
+  --primary-glow-strong: rgba(47, 107, 71, 0.32);
   --secondary-glow: rgba(212, 212, 212, 0.05);
 
-  --text-primary: #050505;
-  --text-secondary: #1C1C1C;
+  --text-primary: #1C1C1C;
+  --text-secondary: #585858;
+  --text-card: #F8F6F2;
 
-  --surface-bg: #d9d6cd;
-  --surface-glass: rgba(243, 239, 230, 0.871);
+  --surface-bg: #E9DFC5;
+  --surface-glass: rgba(233, 223, 197, 0.871);
+  --surface-card: #1D1D1D;
+  --surface-bento: #22201D;
 
-  --border-light: rgba(0, 0, 0, 0.08);
-  --border-medium: rgba(0, 0, 0, 0.13);
-  --border-dark: rgba(0, 0, 0, 0.22);
+  --border-light: #D8CCB3;
+  --border-medium: #C8BC9D;
+  --border-dark: #A89C7D;
 }
 
 * {

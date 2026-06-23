@@ -139,8 +139,8 @@
 
   background-image: radial-gradient(
     circle 250px at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    var(--primary-dark) 0%,
-    var(--text-secondary) 80%
+    var(--primary-dark) 10%,
+    var(--text-secondary) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;

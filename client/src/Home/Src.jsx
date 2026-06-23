@@ -59,7 +59,11 @@ const Src = () => {
             <h2 className="info-card-title">
               About <span className="target-src-placeholder">SRC</span>
             </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div className="info-card-text">
+              <p>The AIChE Student Regional Conference (SRC) is the flagship annual gathering of AIChE student chapters across the India Region. Bringing together hundreds of students, researchers, academicians, and industry professionals, SRC serves as a platform for technical competitions, research presentations, professional networking, and leadership development. The conference provides participants with opportunities to showcase their innovations, exchange ideas, and engage with emerging trends shaping the future of chemical engineering and allied industries. Winners of several SRC competitions also earn the opportunity to represent the region at AIChE's global student events.</p>
+              <p>In India, SRC has been previously hosted by esteemed institutions such as AIChE-VIT, MIT-WPU (SYNTROPY), NIT Rourkela (2020, 2024), Ahmedabad University (2021), VIT (2022), and SVNIT (2023) , ICT IOCB (2025).</p>
+              <p>Following a successful bid, AIChE India SRC 2026 will be hosted for the first time at RGIPT, a premier Institute of National Importance recognized for its excellence in Chemical, Petroleum, and Energy Engineering. This milestone reflects the growing prominence of both RGIPT and its award-winning AIChE Student Chapter on the national stage.</p>
+            </div>
           </div>
         </div>
 
@@ -68,7 +72,11 @@ const Src = () => {
             <h2 className="info-card-title">
               About Viplav
             </h2>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div className="info-card-text">
+              <p>"Every great advancement begins with a revolution of thought. This year, AIChE India SRC 2026 proudly presents Viplav—a call to transform ideas into impact, challenges into opportunities, and ambition into innovation."</p>
+              <p>Viplav, a Sanskrit term signifying transformation, revolution, and progressive change, captures the spirit of AIChE India SRC 2026. Hosted by Rajiv Gandhi Institute of Petroleum Technology (RGIPT)—an Institute of National Importance renowned for its excellence in Chemical Engineering, Petroleum Engineering, and Energy studies—this theme reflects the institute's commitment to innovation, academic rigour, and industry-oriented learning.</p>
+              <p>SRC 2026 aims to inspire the next generation of engineers while addressing the evolving challenges and opportunities in the chemical, energy, and process industries. More than a conference, Viplav is a celebration of transformation, innovation, and the collective vision shaping the future of engineering.</p>
+            </div>
           </div>
         </div>
         </div>

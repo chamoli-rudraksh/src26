@@ -37,14 +37,14 @@
   flex: 0 0 240px;
   height: 120px;
   border-radius: 16px;
-  background-color: var(--surface-bg);
-  border: 1px solid var(--border-dark);
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-light);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  color: var(--text-primary);
+  color: var(--text-card);
 }
 
 .sponsor-card:hover {

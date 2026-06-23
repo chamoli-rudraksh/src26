@@ -3,20 +3,12 @@ import './Faq.css'
 
 const faqData = [
   {
-    question: "How do I register for the conference?",
-    answer: "You can register through the 'Dashboard' portal after creating an account. Payment verification is required to confirm your seat."
+    question: "Where is RGIPT?",
+    answer: "RGIPT is located in Jais, Uttar Pradesh, India. nestled between the historic cities of Amethi (approximately 32 km away) and Rae Bareli (approximately 30 km away). The institute's sprawling green campus provides a serene and intellectually stimulating environment while remaining well-connected to major cities such as Lucknow, Prayagraj, and Varanasi, making it an ideal destination for AIChE India SRC 2026."
   },
   {
-    question: "Is accommodation provided?",
-    answer: "Yes, we provide accommodation for all non-local participants within the campus hostels. You must opt-in for accommodation during the registration process."
-  },
-  {
-    question: "Can I submit more than one paper?",
-    answer: "Participants are allowed to submit a maximum of two papers as the primary author, provided they are in completely different tracks or domains."
-  },
-  {
-    question: "Are there any prerequisites for workshops?",
-    answer: "Most workshops are beginner-friendly. However, any specific prerequisites (like basic Python knowledge or pre-installed software) will be clearly mentioned in the event description."
+    question: "Who can participate in SRC 2026?",
+    answer: "Undergraduate and postgraduate students from chemical engineering and allied fields across India are welcome to participate in SRC 2026."
   }
 ];
 

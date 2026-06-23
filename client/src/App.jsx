@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./shared/Navbar.jsx";
 import Footer from "./shared/Footer.jsx";
 import Main from "./Home/Main.jsx";
@@ -10,25 +10,36 @@ import Contact from "./Contact/Contact.jsx";
 import Registration from "./Registration/Registration.jsx";
 import Sponsor from "./Sponsors/Sponsor.jsx";
 import SmoothScroller from "./shared/SmoothScroller.jsx";
+import TeamProfile from "./TeamProfile/TeamProfile.jsx";
+
+const AppContent = () => {
+  const location = useLocation();
+  const hideNavFooter = location.pathname.startsWith('/team-profile');
+
+  return (
+    <SmoothScroller>
+      {!hideNavFooter && <Navbar />}
+      <main style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/events" element={<Event />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/accommodation" element={<Accommodation />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/register" element={<Registration />} />
+          <Route path="/sponsors" element={<Sponsor />} />
+          <Route path="/team-profile/:teamId" element={<TeamProfile />} />
+        </Routes>
+      </main>
+      {!hideNavFooter && <Footer />}
+    </SmoothScroller>
+  );
+};
 
 export default function App() {
   return (
     <Router>
-      <SmoothScroller>
-        <Navbar />
-        <main style={{ flex: 1 }}>
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/events" element={<Event />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/accommodation" element={<Accommodation />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/register" element={<Registration />} />
-            <Route path="/sponsors" element={<Sponsor />} />
-          </Routes>
-        </main>
-        <Footer />
-      </SmoothScroller>
+      <AppContent />
     </Router>
   );
 }

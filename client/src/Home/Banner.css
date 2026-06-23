@@ -137,7 +137,7 @@
 }
 
 .register-btn {
-  background: linear-gradient(135deg, #d66421 0%, #bd5015 100%);
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
   color: #ffffff;
   padding: 16px 36px;
   font-size: 1.15rem;
@@ -146,7 +146,7 @@
   cursor: pointer;
   border-radius: 50px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-  box-shadow: 0 8px 20px rgba(197, 90, 17, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 104, 56, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,9 +184,9 @@
 }
 
 .register-btn:hover {
-  background: linear-gradient(135deg, #e36a28 0%, #d66421 100%);
+  background: linear-gradient(135deg, #3eb46b 0%, var(--primary-light) 100%);
   box-shadow: 
-    0 12px 30px rgba(197, 90, 17, 0.5),
+    0 12px 30px rgba(0, 104, 56, 0.5),
     inset 0 1px 1px rgba(255, 255, 255, 0.5);
   transform: translateY(-4px);
   color: #fff;
@@ -203,7 +203,7 @@
 
 .register-btn.clicked {
   transform: scale(0.92) !important;
-  box-shadow: 0 0 0 rgba(197, 90, 17, 0) !important;
+  box-shadow: 0 0 0 rgba(0, 104, 56, 0) !important;
   transition: all 0.2s ease-out;
 }
 

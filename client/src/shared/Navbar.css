@@ -41,7 +41,7 @@
 }
 
 .nav-logo {
-  color: var(--text-primary);
+  color: #151515;
   font-family: 'Raleway', sans-serif;
   font-size: 22px;
   font-weight: 700;
@@ -192,7 +192,7 @@
     inset: 0;
     width: 100vw;
     height: 100dvh;
-    background: rgba(243, 239, 230, 0.96); 
+    background: rgba(233, 223, 197, 0.96);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     flex-direction: column;
