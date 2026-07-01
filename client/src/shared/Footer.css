@@ -42,6 +42,9 @@
 .dot::before { top: 5px; left: 0; width: 12px; height: 1px; }
 .dot::after { top: 0; left: 5px; width: 1px; height: 12px; }
 
+/* Make top dots just vertical lines */
+.dot-tl::before, .dot-tr::before { display: none; }
+
 .dot-tl { top: 32px; left: 32px; }
 .dot-tr { top: 32px; right: 32px; }
 .dot-bl { bottom: 32px; left: 32px; }
@@ -50,9 +53,9 @@
 .footer-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 60px;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
   margin-bottom: 80px;
   z-index: 2;
 }
@@ -60,28 +63,36 @@
 .footer-left {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .footer-heading {
   font-family: var(--font-display);
-  font-size: 3rem; /* Enlarged significantly */
-  font-weight: 800; /* Extra bold */
+  font-size: 3.5rem;
+  font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 12px;
-  letter-spacing: -0.03em;
+  margin-bottom: 60px;
+  letter-spacing: -0.02em;
+}
+
+.footer-left-bottom {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-primary-link {
-  font-family: var(--font-body);
-  font-size: 1.15rem; /* Larger contact links */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--accent);
   text-decoration: none;
-  padding: 8px 0;
+  padding-bottom: 6px;
   display: inline-block;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(245, 223, 179, 0.4);
+  margin-bottom: 24px;
   transition: all var(--transition-fast);
+  width: fit-content;
+  letter-spacing: 0.05em;
 }
 
 .footer-primary-link:hover {
@@ -90,17 +101,10 @@
   transform: translateY(-1px);
 }
 
-.footer-secondary-link {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 400;
-}
-
 .footer-address {
   font-family: var(--font-body);
-  font-size: 0.95rem; /* Slightly smaller for hierarchy */
-  color: rgba(255, 255, 255, 0.55); /* Muted contrast */
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.55);
   font-weight: 400;
   line-height: 1.6;
 }
@@ -109,16 +113,17 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 32px;
+  justify-content: space-between;
   text-align: right;
 }
 
 .footer-copyright {
-  font-family: var(--font-body);
+  font-family: 'Courier New', Courier, monospace;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5); /* Muted */
-  font-weight: 400;
-  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .footer-links-container {
@@ -140,7 +145,7 @@
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
   padding: 4px 0;
   transition: all var(--transition-fast);
   border-bottom: 1px solid transparent;
@@ -166,7 +171,7 @@
   letter-spacing: -0.02em;
   text-transform: uppercase;
   padding-bottom: 20px;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.02); /* Reduced stroke */
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2); /* Visible outline matching image */
   background-image: radial-gradient(
     circle 400px at var(--mouse-x, 50%) var(--mouse-y, 50%),
     rgba(255, 255, 255, 0.1) 0%,

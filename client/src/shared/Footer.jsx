@@ -16,7 +16,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="footer-card">
+      <div className="footer-card" onMouseMove={handleMouseMove}>
         <div className="dot dot-tl"></div>
         <div className="dot dot-tr"></div>
         <div className="dot dot-bl"></div>
@@ -25,9 +25,10 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-left">
             <h2 className="footer-heading">Contacts</h2>
-            <a href="mailto:[aiche@rgipt.ac.in]" className="footer-primary-link">aiche@rgipt.ac.in ↗</a>
-            {/* <a href="tel:+911234567890" className="footer-secondary-link">+91 1234567890 ↗</a> */}
-            <p className="footer-address">RGIPT, Rae Bareli, India</p>
+            <div className="footer-left-bottom">
+              <a href="mailto:aiche@rgipt.ac.in" className="footer-primary-link">aiche@rgipt.ac.in ↗</a>
+              <p className="footer-address">RGIPT, Rae Bareli, India</p>
+            </div>
           </div>
 
           <div className="footer-right">
@@ -42,17 +43,6 @@ const Footer = () => {
                 <Link to="/register">Registration ↗</Link>
                 <Link to="/team">Our Team ↗</Link>
               </div>
-              
-              {/* <div className="footer-link-row">
-                <a href="#support">Support ↗</a>
-                <a href="#privacy">Privacy Policy ↗</a>
-                <a href="#terms">Terms & Conditions ↗</a>
-              </div> */}
-
-              <div className="footer-link-row">
-                {/* <a href="#">Instagram ↗</a>
-                <a href="#">LinkedIn ↗</a> */}
-              </div>
             </div>
           </div>
         </div>
@@ -60,7 +50,6 @@ const Footer = () => {
         <div 
           className="footer-giant-text"
           ref={textRef}
-          onMouseMove={handleMouseMove}
         >
           VIPLAV
         </div>
