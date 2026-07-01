@@ -27,6 +27,7 @@ const Sponsors = () => {
   const scrollLeftState = useRef(0);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
 
   // Check scroll position to show/hide arrows
   const checkScroll = () => {
@@ -54,21 +55,45 @@ const Sponsors = () => {
     }
   }, []);
 
+  // Auto scroll effect
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      if (sliderRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+        const cardWidth = window.innerWidth <= 768 ? (window.innerWidth * 0.5) : 204;
+        
+        // If we are at the end, smoothly scroll back to start
+        if (scrollLeft >= scrollWidth - clientWidth - 10) {
+          sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          sliderRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }
+      }
+    }, 3000); // Scroll every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
   const handleMouseDown = (e) => {
     isDown.current = true;
     sliderRef.current.classList.add('grabbing');
     startX.current = e.pageX - sliderRef.current.offsetLeft;
     scrollLeftState.current = sliderRef.current.scrollLeft;
+    setIsPaused(true);
   };
 
   const handleMouseLeave = () => {
     isDown.current = false;
     sliderRef.current.classList.remove('grabbing');
+    setIsPaused(false);
   };
 
   const handleMouseUp = () => {
     isDown.current = false;
     sliderRef.current.classList.remove('grabbing');
+    setIsPaused(false);
   };
 
   const handleMouseMove = (e) => {
@@ -91,11 +116,17 @@ const Sponsors = () => {
     <section className={`premium-sponsors-section reveal ${isVisible ? 'visible' : ''}`} ref={ref}>
       <div className="sponsors-header">
         <span className="sponsors-subtitle">Trusted by Industry Leaders</span>
-        <h2 className="sponsors-title">Our Partners</h2>
+        <h2 className="sponsors-title">Our Past Partners</h2>
         <div className="sponsors-divider"></div>
       </div>
 
-      <div className="sponsors-slider-outer">
+      <div 
+        className="sponsors-slider-outer"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
+      >
         {showLeftArrow && (
           <button className="slider-arrow left" onClick={() => scrollSlider('left')} aria-label="Scroll left">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

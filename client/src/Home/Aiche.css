@@ -73,7 +73,8 @@
   color: var(--text-secondary);
   line-height: 1.8; /* Generous breathing room */
   max-width: 65ch; /* Comfortable reading line length */
-  text-align: left; /* Clean left alignment for Call-to-Action content */
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .ref-btn-primary {
@@ -102,6 +103,10 @@
     align-items: flex-start;
     gap: 40px;
     padding: 40px 5%;
+  }
+  .ref-cta-content p {
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
 

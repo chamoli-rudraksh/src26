@@ -178,6 +178,7 @@
   .notebook-title { font-size: 2.2rem; }
   .notebook-details { flex-direction: column; gap: 24px; }
   .spirals-container { padding: 0 10px; }
+  .spiral-unit:nth-child(n+9) { display: none; }
 }
 
 @media (max-width: 480px) {
@@ -192,6 +193,7 @@
   .spiral-unit { width: 18px; }
   .spiral-hole { width: 18px; height: 18px; }
   .spiral-ring { width: 8px; height: 36px; }
+  .spiral-unit:nth-child(n+6) { display: none; }
 }
 
 @media (max-width: 360px) {

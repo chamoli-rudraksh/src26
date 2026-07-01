@@ -28,7 +28,8 @@
   line-height: 1.8;
   margin-bottom: 56px; /* Increased margin */
   max-width: 60ch; /* Comfortable reading width */
-  text-align: left; /* Clean left alignment */
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .contact-cards {
@@ -179,6 +180,7 @@
   .contact-container { flex-direction: column; padding: 140px 5vw 80px; gap: 48px; }
   .contact-left, .contact-right { width: 100%; }
   .contact-title { font-size: 2.2rem; }
+  .contact-description { text-align: left; }
   .contact-form-container { padding: 36px 28px; }
   .contact-cards { grid-template-columns: 1fr; }
 }

@@ -131,7 +131,8 @@
   max-height: none;
   overflow-y: visible;
   padding-right: 0;
-  text-align: left; /* Explicitly left-aligned for maximum legibility */
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .ev-full-desc p,
@@ -489,7 +490,7 @@
     padding-right: 5vw;
     gap: 18px;
   }
-  .ev-desc { font-size: 0.88rem; }
+  .ev-desc { font-size: 0.88rem; text-align: left; }
   .ev-nav { bottom: 1.8rem; padding: 0 5vw; }
 }
 

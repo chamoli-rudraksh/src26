@@ -155,7 +155,8 @@
   }
   .ref-text-content { padding: 0 4%; max-width: 100%; display: block; }
   .ref-desc p {
-    text-align: left; /* Left align on mobile for readability */
+    text-align: justify;
+    text-justify: inter-word;
     max-width: 100%;
   }
   .ref-image-wrapper { 

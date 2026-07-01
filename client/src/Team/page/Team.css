@@ -97,13 +97,11 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  filter: grayscale(40%) brightness(0.95);
-  transition: all 0.5s ease;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .member-card:hover .member-image {
-  filter: grayscale(0%) brightness(1);
-  transform: scale(1.03);
+  transform: scale(1.08);
 }
 
 .member-image-placeholder:not(:has(.member-image))::after {

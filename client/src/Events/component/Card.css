@@ -71,7 +71,8 @@
   line-height: 1.8; /* Increased line height */
   margin-bottom: 36px; /* Increased margin */
   max-width: 60ch; /* Comfortable reading width */
-  text-align: left; /* Clean left alignment */
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .competition-card-description p,
@@ -154,6 +155,7 @@
   .competition-card-image { flex: none; width: 100%; height: 280px; min-height: auto; }
   .competition-card-content { flex: none; padding: 40px 24px; border-left: none !important; border-right: none !important; border-top: 1px solid rgba(0, 0, 0, 0.05); }
   .competition-card-title { font-size: 1.6rem; }
+  .competition-card-description { text-align: left; }
 }
 
 @media (max-width: 480px) {
