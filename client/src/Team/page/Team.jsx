@@ -13,6 +13,24 @@ const Team = () => {
     <>
       <TeamHero />
       <div className="team-page-container">
+
+        {/* ── Faculty Advisor ── */}
+        <div className="faculty-advisor-section">
+          <p className="faculty-advisor-eyebrow">Our Mentor</p>
+          <h2 className="faculty-advisor-heading">Faculty Advisor</h2>
+          <div className="faculty-advisor-card">
+            <div className="faculty-advisor-img-wrap">
+              <img src="/team/mentor.jpg" alt="Faculty Advisor" className="faculty-advisor-img" loading="lazy" decoding="async" />
+            </div>
+            <div className="faculty-advisor-info">
+              <h3 className="faculty-advisor-name">Dr. Vivek Kumar</h3>
+              <p className="faculty-advisor-role">Faculty Advisor</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="faculty-divider" />
+
         <div className="teams-list">
         {bentoCards.map((team, idx) => {
           const [teamRef, teamVisible] = useReveal(0.1);

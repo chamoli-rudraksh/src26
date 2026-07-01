@@ -140,6 +140,119 @@
   margin-top: 60px;
 }
 
+/* ===== FACULTY ADVISOR SECTION ===== */
+.faculty-advisor-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 5% 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.faculty-advisor-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 12px;
+}
+
+.faculty-advisor-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 750;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin: 0 0 48px;
+  position: relative;
+}
+
+.faculty-advisor-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.faculty-advisor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.faculty-advisor-img-wrap {
+  width: 240px;
+  height: 310px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+}
+
+.faculty-advisor-img-wrap:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(11, 93, 70, 0.12);
+}
+
+.faculty-advisor-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.faculty-advisor-img-wrap:hover .faculty-advisor-img {
+  transform: scale(1.05);
+}
+
+.faculty-advisor-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.faculty-advisor-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.faculty-advisor-role {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin: 0;
+}
+
+.faculty-divider {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(180deg, transparent, var(--border-medium), transparent);
+  margin: 60px auto;
+}
+
+@media (max-width: 480px) {
+  .faculty-advisor-img-wrap { width: 180px; height: 230px; }
+  .faculty-advisor-heading { font-size: 1.8rem; }
+}
+
 @media (max-width: 768px) {
   .team-page-container { padding: 40px 4% 100px; }
   .teams-list { gap: 100px; }
